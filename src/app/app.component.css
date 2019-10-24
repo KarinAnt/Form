@@ -1,0 +1,22 @@
+form{
+    width: 30%;
+    margin:100px auto;
+    background-color: rgb(40, 100, 102);
+    padding: 50px 100px 100px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+input{
+    width: 90%;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid white;
+    height: 30px;
+    background-color: rgb(40, 100, 102);
+    color: white;
+    font-size: 18px;
+}
+body{
+    background-color: thistle;
+}
