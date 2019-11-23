@@ -7,18 +7,14 @@ import { MyServiceService } from '../my-service.service';
   styleUrls: ['./mycomp.component.css']
 })
 export class MycompComponent implements OnInit {
-  value=0;
-  ab;
+  parentNumbers = [5, 10, 15, 20];
   constructor(private myServiceService: MyServiceService) { }
 
   ngOnInit() {
-
-  }
-  onClick(){
-    this.value++;
-  }
-  onSubmit(){
-    this.myServiceService.set();
-    this.ab = this.myServiceService.a;
+    setInterval(() => {
+      // this.parentNumbers.push(this.parentNumbers[this.parentNumbers.length - 1] + 5);
+      this.parentNumbers = this.parentNumbers.concat([this.parentNumbers[this.parentNumbers.length - 1] + 5]);
+    }, 1000);
   }
 }
+//REFERENCE

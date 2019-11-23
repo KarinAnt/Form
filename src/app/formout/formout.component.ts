@@ -8,16 +8,17 @@ import { MyServiceService } from '../my-service.service';
   changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class FormoutComponent implements OnInit {
-  @Input() value;
-  ab ;
+  @Input() parentNumbers;
+  numbers = [1, 2, 3, 4];
   constructor(private myServiceService: MyServiceService) {
    }
 
   ngOnInit() {
-    this.ab = this.myServiceService.a;
+    setInterval(() => {
+      // this.numbers.push(this.numbers[this.numbers.length - 1] + 1);
+      this.numbers = this.numbers.concat([this.numbers[this.numbers.length - 1] + 1]);
+      console.log(this.numbers);
+    }, 1000);
   }
-  onSubmit(){
-    this.myServiceService.set();
-    this.ab = this.myServiceService.a;
-  }
+
 }
