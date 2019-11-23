@@ -1,7 +1,10 @@
+<div>
+    <span *ngFor="let number of numbers"> {{ number }} </span> 
+</div>
 
-<span *ngFor="let number of numbers"> {{ number }} </span> 
+<div>
+    <p>Child</p>
+    <span *ngFor="let number of parentNumbers"> {{ number }} </span> 
+</div>
 
-<br>
-
-<span *ngFor="let number of parentNumbers"> {{ number }} </span> 
-
+<!-- <p>Count- {{count}}</p> -->
